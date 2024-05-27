@@ -4,6 +4,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../models/models.dart';
 
+//FALTA AÑADIR API KEY PARA FUNCIONAMIENTO DE LA FUNCIONALIDAD DE MAPA, POR MOTIVOS DE SEGURIDAD, ESTA NO ES INCLUIDA EN EL PROYECTO
+
 class MapaScreen extends StatefulWidget {
   const MapaScreen({Key? key}) : super(key: key);
 
