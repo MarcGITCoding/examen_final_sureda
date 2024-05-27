@@ -2,6 +2,7 @@ import 'package:examen_final_sureda/models/models.dart';
 import 'package:examen_final_sureda/services/services.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
+import '../preferences/preferences.dart';
 import '../widgets/widgets.dart';
 import '../ui/ui.dart';
 
@@ -15,6 +16,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home Screen'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Preferences.user = '';
+              Preferences.pass = '';
+              Navigator.pushReplacementNamed(context, 'login');
+            },
+            icon: Icon(Icons.logout),
+          ),
+        ],
       ),
       body: platos.isEmpty
           ? Loading()
